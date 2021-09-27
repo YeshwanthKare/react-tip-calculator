@@ -11,6 +11,9 @@ const MemberCount = (props) => {
       </label>
       <TextField
         type="Number"
+        onWheel={(event) => {
+          event.target.blur();
+        }}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">

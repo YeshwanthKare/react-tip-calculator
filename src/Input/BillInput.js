@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
+import "./BillInput.css";
 
 const BillInput = (props) => {
   return (
@@ -10,6 +11,10 @@ const BillInput = (props) => {
       </label>
       <TextField
         type="Number"
+        className="bill-input"
+        onWheel={(event) => {
+          event.target.blur();
+        }}
         InputProps={{
           startAdornment: <InputAdornment position="start">$</InputAdornment>,
           style: { textAlign: "right" },
