@@ -20,7 +20,12 @@ const PercentageButtons = (props) => {
         <button type="button" value="50" onClick={props.buttonHandler}>
           {50}%
         </button>
-        <button type="button">Custom</button>
+        <input
+          onChange={props.buttonHandler}
+          type="text"
+          placeholder="Custom"
+          style={{ textAlign: "right", width: "80px" }}
+        />
       </div>
     </div>
   );

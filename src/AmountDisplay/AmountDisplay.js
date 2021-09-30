@@ -35,6 +35,7 @@ const AmountDisplay = (props) => {
           </div>
           <div className="person-amount-display">
             ${isNaN(amountPerPerson) ? "0.00" : amountPerPerson}
+            {amountPerPerson === Infinity && "0.00"}
           </div>
         </div>
         <button type="button" onClick={props.resetHandler}>
